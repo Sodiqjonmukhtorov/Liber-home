@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div>
       <footer className="bg-indigo-600 mt-[93px] pt-[31px] pb-[63px] text-white">
-        <div className="container mx-auto flex gap-[137px]">
+        <div className="container mx-auto flex gap-[200px]">
           <ul className="space-y-4">
             <h4 className="text-lg font-bold cursor-pointer">Платформа хақида</h4>
             <li className="cursor-pointer hover:text-yellow-400">Liber ўзи нима?</li>
@@ -39,7 +39,7 @@ export const Footer = () => {
       </footer>
 
       <div className="bg-slate-800 pt-[12px] pb-[33px] text-white">
-        <div className="container mx-auto flex gap-[131px]">
+        <div className="container mx-auto flex gap-[200px]">
           <ul className="space-y-2">
             <p className="text-lg font-bold">Ижтимоий тармоқлар</p>
             <div className="flex gap-3 mt-2">
@@ -51,7 +51,7 @@ export const Footer = () => {
           </ul>
           <ul className="space-y-2">
             <p className="text-lg font-bold">Боғланиш</p>
-            <li>
+            <li className="flex gap-5">
               <a className="hover:underline" href="tel:+998902537753">+998 90 253 77 53</a>
               <a className="block hover:underline" href="mailto:support@liber.uz">support@liber.uz</a>
             </li>
