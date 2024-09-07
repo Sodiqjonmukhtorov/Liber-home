@@ -1,10 +1,17 @@
 import React from "react";
 
-export default function Page() {
-  return (
-   <div>
-      <div >
-      </div>
-   </div>
-  );
+interface PageProps {
+  title: string;
 }
+
+const Page: React.FC<PageProps> = ({ title }) => {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <div>
+      </div>
+    </div>
+  );
+};
+
+export default Page;

@@ -3,202 +3,65 @@ import { Ball_icon } from "../image/ball_icon";
 import { Music } from '../image/music';
 
 const Product: React.FC = () => {
+  const products = [
+    { title: "1984", genre: "SIYOSAT, FANTASTIKA" },
+    { title: "Rich dad poor dad", genre: "SIYOSAT, FANTASTIKA" },
+    { title: "Код 8", genre: "SIYOSAT, FANTASTIKA" },
+    { title: "Даниел КИЗ", genre: "SIYOSAT, FANTASTIKA" },
+    { title: "Бепарволикнинг", genre: "SIYOSAT, FANTASTIKA" }
+  ];
+
   return (
     <div className='container w-[1200px] ml-auto mr-auto mt-[40px]'>
+      {/* Birinchi qator mahsulotlar */}
       <div className='flex gap-10'>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">1984</p>
-            <div className="w-[142px] h-[19px]">
+        {products.map((item, index) => (
+          <div className="w-[239px] h-[450px] relative" key={index}>
+            <img
+              src="placeholder.jpeg" 
+              className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
+              alt="Placeholder"
+            />
+            <div className="w-[142px] h-30">
+              <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">
+                {item.title}
+              </p>
               <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
+                {item.genre}
+              </p>
+              <div className='absolute left-0 top-[410px] flex justify-between w-[142px]'>
                 <Ball_icon /> 
                 <Music/>
-                </div>
-              </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Rich dad poor dad</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Код 8</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Даниел КИЗ</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Бепарволикнинг</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
+
+      {/* Ikkinchi qator mahsulotlar - Audiokitoblar */}
       <p className="text-[32px] font-semibold text-left pt-5 pb-10 text-[#242424]">Аудио китоблар</p>
       <div className='flex gap-20'>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">1984</p>
-            <div className="w-[142px] h-[19px]">
+        {products.map((item, index) => (
+          <div className="w-[239px] h-[450px] relative" key={index}>
+            <img
+              src="placeholder.jpeg" 
+              className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
+              alt="Placeholder"
+            />
+            <div className="w-[142px] h-30">
+              <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">
+                {item.title}
+              </p>
               <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
+                {item.genre}
+              </p>
+              <div className='absolute left-0 top-[410px] flex justify-between w-[142px]'>
                 <Ball_icon /> 
                 <Music/>
-                </div>
-              </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Rich dad poor dad</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Код 8</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Даниел КИЗ</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="w-[239px] h-[450px] relative">
-          <img
-            src="placeholder.jpeg" 
-            className="w-[239px] h-[336px] absolute left-[-1px] top-[-1px] rounded-[14px] object-cover"
-            alt="Placeholder"
-          />
-          <div className="w-[142px] h-30">
-            <p className="absolute left-0 top-[354px] text-xl font-bold text-left text-[#11142d]">Бепарволикнинг</p>
-            <div className="w-[142px] h-[19px]">
-              <p className="absolute left-0 top-[390px] text-sm text-left text-[#3f51b5]">
-                SIYOSAT, FANTASTIKA
-                <div className='flex justify-between'>
-                <Ball_icon /> 
-                <Music/>
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
